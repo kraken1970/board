@@ -1,24 +1,43 @@
 {
-  "name": "board",
+  "name": "board-test",
   "version": "1.0.0",
-  "description": "Describe board here",
-  "private": true,
+  "description": "board-test React component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
-    "build": "nwb build-react-app",
-    "clean": "nwb clean-app",
-    "start": "nwb serve-react-app",
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+  "peerDependencies": {
+    "react": "^17.0.1"
   },
   "devDependencies": {
-    "nwb": "0.25.x"
+    "nwb": "0.25.x",
+    "react": "*",
+    "react-dom": "^17.0.1"
   },
   "author": "",
+  "homepage": "",
   "license": "MIT",
-  "repository": ""
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ],
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "nanoid": "^3.1.20",
+    "react-dnd": "^13.1.1",
+    "react-dnd-html5-backend": "^12.1.1"
+  }
 }
